@@ -1,0 +1,144 @@
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /* background-image: linear-gradient(#114df0, #e8092e, #DDD); */
+  background-color: #DDD;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+.text{
+  margin: 0 12px 30px;
+  padding: 10px;
+  text-align: center;
+  background-color: chocolate;
+  border-radius: 10px;
+}
+.container{
+    width: 60%;
+    margin: 10% auto;  
+}
+
+ .ListItem{
+  color: black;
+  border-radius: 10px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.ListItem p{
+     margin: 0;
+     padding: 10px 0px;
+}
+.ListItem span{
+  display: inline-block;
+  text-align: center;
+  font-size: 20px;
+  padding: 10px 0;
+  border:  .3px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+  margin: 10px 5px 10px 0;
+
+}
+
+.ListItem span.title{
+  background-color: #153794;
+  color:  #fff;
+}
+
+form{
+  display: flex;
+  justify-content:center;
+  gap: 8px;
+  margin: 25px 0;
+}
+form input {
+  padding: 15px;
+  background: #ebebeb;
+  border: transparent;
+  border: .3px solid #ccc;
+  border-radius: 5px;
+}
+form input:focus{
+  border: none;
+  outline: 2px solid #5d88ff;
+}
+.ListItem span.name,
+form input[type=text] {
+  width: 20%;
+}
+
+.ListItem span.age,
+form input[type=number] {
+  width: 20%;
+}
+.ListItem span.email,
+form input[type=email] {
+  width: 40%;
+}
+
+.ListItem span.action,
+form input[type=submit] {
+  width: 15%;
+}
+
+.ListItem span.icon {
+  color: red;
+  cursor: pointer;
+}
+
+form input[type=submit] {
+  background-color: #153794;
+  color: #fff;
+  cursor: pointer;
+}
+
+
+@media screen and (max-width : 574px) {
+  .container{
+    width: 95%;
+  }
+  .ListItem :first-child{
+    display: none;
+  }
+  form{
+    flex-direction: column;
+  }
+  form input {
+    width: 100%;
+  }
+    .ListItem span.name, form input[type=text], 
+    .ListItem span.age, form input[type=number], 
+    .ListItem span.email, form input[type=email], 
+    .ListItem span.action, form input[type=submit]{
+      width: 100%;
+    }
+        form input[type=submit]{
+          font-size: 20px;
+          font-weight: bold;
+        }
+  
+}
+@media screen and (min-width : 575px){
+   .container {
+    width: 90%;
+  }
+}
+@media screen and (min-width : 992px){
+  .container {
+      width: 70%;
+    }
+}
